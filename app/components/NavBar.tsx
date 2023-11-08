@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const NavBar = () => {
     return (
-        <header className="w-screen px-[5vw] min-h-[10vh] flex items-center justify-between space-x-10">
+        <header className="w-screen px-[5vw] min-h-[10vh] flex items-center justify-between space-x-10 border-b-[0.5px] border-neutral-700">
             <Link href={'/'}><h1 className="text-white text-3xl font-bold">Logo</h1></Link>
             <nav>
                 <ul className="space-x-10 hidden md:flex text-white">

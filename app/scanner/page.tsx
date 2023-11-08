@@ -50,12 +50,12 @@ export default function Scanner() {
         })()
     }, [qrData])
 
-    return <div className={`w-screen h-screen pt-[12vh]
-                            ${status == null ? 'bg-gray-800' : ''}
+    return <div className={`w-screen h-screen pt-[15vh]
+                            ${status == null ? 'bg-neutral-900' : ''}
                             ${status == false ? 'bg-red-400' : ''}
                             ${status == true ? 'bg-green-400' : ''}`}>
         <div className="absolute top-0 left-0 z-20"><NavBar /></div>
-        <div className="bg-gray-700 text-white p-5 rounded-md w-[90vw] md:w-[30vw] mb-10 m-auto">
+        <div className="bg-neutral-800 border-[1px] border-neutral-700 text-white p-5 rounded-md w-[90vw] md:w-[30vw] mb-10 m-auto">
             <p>Current state: {qrData ? 'Processing' : 'Ready'}</p>
             <p>Users in system: {currentNumber}</p>
         </div>
