@@ -1,0 +1,38 @@
+import Image from "next/image"
+import NavBar from "./NavBar"
+import Link from "next/link"
+import bg from '@/public/bg.jpg'
+import NextJSLogo from "./NextJSLogo"
+import TypescriptLogo from "./TypescriptLogo"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+export default function Hero() {
+
+
+    return <>
+        <div className="absolute top-0 left-0 z-20"><NavBar /></div>
+        <section className="min-h-screen w-screen py-[12vh] px-5 flex flex-col items-center justify-center text-white z-20 bg-[url('/bg.jpg')] bg-cover" >
+            <h2 className="text-3xl md:text-4xl font-bold">WE&apos;RE THE EXPERTS</h2>
+            <h3 className="text-2xl text-[#33996B] mb-5">Ahead of the curve.</h3>
+            <span className="w-[80vw] md:w-[40vw] text-center mb-10">Your Passport to a Safer Experience - Where Identity Verification Meets Innovation.</span>
+            <div className="flex space-x-5 mb-20">
+                <Link href={'/scanner'}>
+                    <button className="bg-[#33996B] font-bold text-gray-900 px-4 py-3 rounded-lg shadow-md shadow-[#33996B]/50 flex items-center ">
+                        <span>Start demo</span> <FontAwesomeIcon icon={faArrowRight} style={{
+                            width: '20px',
+                            marginLeft: '1rem'
+                        }} />
+                    </button>
+                </Link>
+                <Link href={'#'}>
+                    <button className="bg-none px-4 py-3 rounded-lg border-2 border-[#33996B] text-[#33996B] font-bold">Contact us</button>
+                </Link>
+            </div>
+            <div>Our tech stack</div>
+            <div className="mt-5 flex space-x-5 items-center">
+                <NextJSLogo />
+                <TypescriptLogo />
+            </div>
+        </section>
+    </>
+}

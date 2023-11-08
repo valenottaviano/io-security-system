@@ -11,12 +11,15 @@ const NavBar = () => {
                 <ul className="space-x-10 hidden md:flex text-white">
                     <Link href={'/'}><li>Home</li></Link>
                     <Link href={'#'}><li>Docs</li></Link>
-                    <Link href={'/scanner'}><li>Program</li></Link>
+                    <Link href={'/scanner'}><li>Demo</li></Link>
                     <Link href={'#'}><li>Contact us</li></Link>
                 </ul>
             </nav>
             <Link href={'https://github.com/valenottaviano/io-security-system'}>
-                <FontAwesomeIcon icon={faGithub} className="fas fa-check text-white text-3xl"></FontAwesomeIcon>
+                <FontAwesomeIcon icon={faGithub} className="fas fa-check" style={{
+                    width: '35px',
+                    color: 'white'
+                }}></FontAwesomeIcon>
             </Link>
         </header >
     )
