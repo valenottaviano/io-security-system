@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCodeReader from "../components/QRCodeReader";
 import axios from "axios";
+import NavBar from "../components/NavBar";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -23,8 +24,6 @@ export default function Scanner() {
             }
         })()
     }, [status])
-
-
 
     useEffect(() => {
         (async () => {
@@ -51,14 +50,17 @@ export default function Scanner() {
         })()
     }, [qrData])
 
-    return <div className={`w-screen h-screen flex flex-col items-center justify-center
-                            ${status == null ? 'bg-default-400' : ''}
+    return <div className={`w-screen h-screen pt-[12vh]
+                            ${status == null ? 'bg-gray-800' : ''}
                             ${status == false ? 'bg-red-400' : ''}
                             ${status == true ? 'bg-green-400' : ''}`}>
-        <div className="bg-white p-5 rounded-md w-[90vw] mb-10">
+        <div className="absolute top-0 left-0 z-20"><NavBar /></div>
+        <div className="bg-gray-700 text-white p-5 rounded-md w-[90vw] md:w-[30vw] mb-10 m-auto">
             <p>Current state: {qrData ? 'Processing' : 'Ready'}</p>
             <p>Users in system: {currentNumber}</p>
         </div>
-        <QRCodeReader setQrData={setQrData} />
+        <div className="w-screen md:w-[30vw] flex items-center justify-center m-auto">
+            <QRCodeReader setQrData={setQrData} />
+        </div>
     </div>
 }
