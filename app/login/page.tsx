@@ -1,6 +1,7 @@
-import axios from "axios";
-import Scanner from "../components/Scanner";
-import { cookies } from 'next/headers'
+import Footer from "../components/Footer";
+import LoginForm from "../components/LoginForm";
+import NavBar from "../components/NavBar";
+import { cookies } from "next/headers";
 
 const verifyToken = async () => {
     if (cookies().get('token')) {
@@ -18,12 +19,11 @@ const verifyToken = async () => {
     }
 }
 
-export default async function ScannerPage() {
+export default async function Contact() {
     const session = await verifyToken()
-
-    return (
-        <>
-            <Scanner isLogged={session} />
-        </>
-    )
+    return <section className="min-h-screen w-screen bg-neutral-900 flex flex-col items-center justify-between">
+        <NavBar />
+        <LoginForm isLogged={session} />
+        <Footer />
+    </section>
 }
