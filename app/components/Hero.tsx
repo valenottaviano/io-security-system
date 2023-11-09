@@ -4,7 +4,7 @@ import Link from "next/link"
 import bg from '@/public/bg.jpg'
 import NextJSLogo from "./NextJSLogo"
 import TypescriptLogo from "./TypescriptLogo"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight, faFile } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import PythonLogo from "./PythonLogo"
 export default function Hero() {
@@ -24,8 +24,14 @@ export default function Hero() {
                         }} />
                     </button>
                 </Link>
-                <Link href={'/contact'}>
-                    <button className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">Docs</button>
+                <Link href={'#'}>
+                    <button className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">
+                        <span>Docs</span><FontAwesomeIcon icon={faFile} style={{
+                            width: '20px',
+                            marginLeft: '0.5rem',
+                            color: 'gray'
+                        }} />
+                    </button>
                 </Link>
             </div>
             <div>Our tech stack</div>
