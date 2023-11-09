@@ -12,7 +12,7 @@ const NavBar = () => {
                     <Link href={'/'}><li>Home</li></Link>
                     <Link href={'#'}><li>Docs</li></Link>
                     <Link href={'/scanner'}><li>Demo</li></Link>
-                    <Link href={'#'}><li>Contact us</li></Link>
+                    <Link href={'/contact'}><li>Contact us</li></Link>
                 </ul>
             </nav>
             <Link href={'https://github.com/valenottaviano/io-security-system'}>
