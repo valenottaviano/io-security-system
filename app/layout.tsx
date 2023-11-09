@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <title>IO UNSTA</title>
+      <title>spotter AI</title>
     </html>
   )
 }
