@@ -10,8 +10,8 @@ export default function Hero() {
     // {bg-[url('/bg.jpg')]}
     return <>
         <div className="absolute top-0 left-0 z-20"><NavBar /></div>
-        <section className="min-h-screen w-screen py-[12vh] px-5 flex flex-col items-center justify-center text-white z-20 bg-neutral-900 bg-cover" >
-            <h2 className="text-3xl md:text-5xl font-bold">WE&apos;RE THE EXPERTS</h2>
+        <section className="min-h-[50vh] w-screen pt-[10vh] px-5 flex flex-col items-center justify-center text-white z-20 bg-neutral-900 bg-cover" >
+            <h2 className="mt-[4rem] text-3xl md:text-5xl font-bold">WE&apos;RE THE EXPERTS</h2>
             <h3 className="text-2xl  md:text-4xl text-emerald-400 mb-5">ahead of the curve.</h3>
             <span className="w-[80vw] md:w-[40vw] text-center mb-10 md:text-xl">Your Passport to a Safer Experience - Where Identity Verification Meets Innovation.</span>
             <div className="flex space-x-5 mb-20">

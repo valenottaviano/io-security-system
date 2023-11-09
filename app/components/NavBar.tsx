@@ -17,8 +17,9 @@ const NavBar = () => {
             </nav>
             <Link href={'https://github.com/valenottaviano/io-security-system'}>
                 <FontAwesomeIcon icon={faGithub} className="fas fa-check" style={{
-                    width: '35px',
-                    color: 'white'
+                    width: '40px',
+                    color: 'white',
+                    fontSize: '30px'
                 }}></FontAwesomeIcon>
             </Link>
         </header >
