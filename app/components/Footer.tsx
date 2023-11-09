@@ -3,8 +3,8 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
-    return <section className="min-h-[30vh] w-screen bg-black flex items-center justify-between px-[20vw]">
-        <h1 className="text-white text-4xl">Logo</h1>
+    return <section className="min-h-[30vh] w-screen bg-black flex flex-col md:flex-row items-center justify-center md:justify-between px-10 md:px-[20vw]">
+        <h1 className="text-white text-4xl mb-10 md:mb-10">Logo</h1>
         <div className="">
             <h4 className="text-white mb-5">Let&apos;s stay in touch!</h4>
             <div className="flex justify-between w-full space-x-2">

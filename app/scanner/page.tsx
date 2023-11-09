@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import QRCodeReader from "../components/QRCodeReader";
 import axios from "axios";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -62,5 +63,6 @@ export default function Scanner() {
         <div className="w-screen md:w-[30vw] flex items-center justify-center m-auto">
             <QRCodeReader setQrData={setQrData} />
         </div>
+        <Footer />
     </div>
 }
