@@ -22,7 +22,7 @@ export default function Banner() {
             <div className="flex flex-col md:flex-row md:space-x-10 space-y-10 md:space-y-0">
                 <div className="p-4 flex flex-col grow bg-neutral-800 border-[1px] border-neutral-700 rounded-md  shadow-md md:basis-1/3 ">
                     <h3 className="mb-4 font-bold text-emerald-400">Intuitive Access, Anytime, Anywhere</h3>
-                    <p className="text-white">Our startup boasts a user-friendly interface, providing easy access to parking solutions at your fingertips. Whether you're a driver or a parking lot manager, our platform is designed for simplicity and convenience.</p>
+                    <p className="text-white">Our startup boasts a user-friendly interface, providing easy access to parking solutions at your fingertips. Whether you&apos;re a driver or a parking lot manager, our platform is designed for simplicity and convenience.</p>
                     <Link href={'#'}>
                         <button className="mt-5 bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">not available</button>
                     </Link>
