@@ -25,7 +25,7 @@ export default function Hero() {
                     </button>
                 </Link>
                 <Link href={'/contact'}>
-                    <button className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">Contact us</button>
+                    <button className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">Docs</button>
                 </Link>
             </div>
             <div>Our tech stack</div>
