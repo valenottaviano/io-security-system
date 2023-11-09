@@ -6,6 +6,7 @@ import NextJSLogo from "./NextJSLogo"
 import TypescriptLogo from "./TypescriptLogo"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import PythonLogo from "./PythonLogo"
 export default function Hero() {
     // {bg-[url('/bg.jpg')]}
     return <>
@@ -31,6 +32,7 @@ export default function Hero() {
             <div className="mt-5 flex space-x-5 items-center">
                 <NextJSLogo />
                 <TypescriptLogo />
+                <PythonLogo />
             </div>
         </section>
     </>
