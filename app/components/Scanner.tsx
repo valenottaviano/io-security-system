@@ -6,16 +6,12 @@ import axios from "axios";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { useRouter } from "next/navigation";
-import { cookies } from "next/headers";
+import { signOut } from "next-auth/react"
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-export default function Scanner({ isLogged }: any) {
+export default function Scanner({ session }: any) {
     const router = useRouter()
-
-    if (isLogged == false) {
-        router.push('/login')
-    }
 
     const [qrData, setQrData] = useState<any>(null)
     const [status, setStatus] = useState<boolean | null>(null)
@@ -75,10 +71,7 @@ export default function Scanner({ isLogged }: any) {
             </div>
         </div>
         <button
-            onClick={async () => {
-                await axios.post('/api/logout')
-                router.push('/login')
-            }}
+            onClick={() => signOut({ callbackUrl: process.env.NEXT_PUBLIC_API_URL })}
             className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">
             <span>Logout</span>
         </button>

@@ -1,29 +1,18 @@
-import axios from "axios";
+
+'use client'
+
 import Scanner from "../components/Scanner";
-import { cookies } from 'next/headers'
+import { useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
-const verifyToken = async () => {
-    if (cookies().get('token')) {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/verify-token`, {
-            method: 'POST',
-            body: JSON.stringify({
-                token: cookies().get('token')?.value
-            }),
-            cache: "no-store"
-        })
-        const r_json = res.json()
-        return r_json;
-    } else {
-        return false
-    }
-}
-
-export default async function ScannerPage() {
-    const session = await verifyToken()
-
+export default function ScannerPage() {
+    const { data: session } = useSession({
+        required: true,
+        onUnauthenticated() {
+            redirect('/api/auth/signin?callbackUrl=/scanner')
+        }
+    })
     return (
-        <>
-            <Scanner isLogged={session} />
-        </>
+        <Scanner />
     )
 }
