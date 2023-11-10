@@ -13,6 +13,6 @@ export default function ScannerPage() {
         }
     })
     return (
-        <Scanner />
+        <Scanner session={session} />
     )
 }
