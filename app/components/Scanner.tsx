@@ -39,8 +39,9 @@ export default function Scanner({ isLogged }: any) {
             if (qrData) {
                 try {
                     const token = qrData.split('?')[1].split('&')[0].replace('token=', '')
+                    const type = qrData.split('?')[1].split('&')[1].replace('type=', '')
                     try {
-                        const res = await axios.post('/api/proxy', { token: token })
+                        const res = await axios.post('/api/proxy', { token: token, type: type })
                         const isTrue = (res.data.status === 'true');
                         if (isTrue) {
                             setCurrentNumber(currentNumber + 1)

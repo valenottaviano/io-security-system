@@ -4,12 +4,13 @@ import axios from 'axios';
 export async function POST(req: Request) {
     const body = await req.json();
     const token = body.token;
+    const type = body.type;
 
     if (token) {
         const response = await axios.get('http://alumnos.unsta.edu.ar/index.php/public/validarCredencial', {
             params: {
                 token: token,
-                type: 0,
+                type: type,
             },
             headers: {
                 Host: 'alumnos.unsta.edu.ar',
