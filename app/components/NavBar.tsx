@@ -15,7 +15,7 @@ const NavBar = () => {
             <nav>
                 <ul className="space-x-10 hidden md:flex text-white">
                     <Link href={'/'}><li>Home</li></Link>
-                    <Link href={'#'}><li>Docs</li></Link>
+                    <Link href={'https://docs.spotter.com.ar'}><li>Docs</li></Link>
                     <Link href={'/scanner'}><li>Demo</li></Link>
                     <Link href={'/contact'}><li>Contact us</li></Link>
                 </ul>
