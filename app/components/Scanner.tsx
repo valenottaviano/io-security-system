@@ -38,6 +38,7 @@ export default function Scanner({ session }: any) {
                     const type = qrData.split('?')[1].split('&')[1].replace('type=', '')
                     try {
                         const res = await axios.post('/api/proxy', { token: token, type: type })
+                        const res2 = await axios.post('/api/transaction', { token: token })
                         const isTrue = (res.data.status === 'true');
                         if (isTrue) {
                             setCurrentNumber(currentNumber + 1)
