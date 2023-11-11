@@ -65,7 +65,7 @@ export default function Scanner({ session }: any) {
         <div>
             <div className="bg-neutral-800 border-[1px] border-neutral-700 text-white p-5 rounded-md w-[90vw] md:w-[30vw] mb-10 m-auto">
                 <p>Current state: {qrData ? 'Processing' : 'Ready'}</p>
-                <p>Users in system: {currentNumber}</p>
+                {/* <p>Users in system: {currentNumber}</p> */}
             </div>
             <div className="w-screen md:w-[30vw] flex items-center justify-center m-auto">
                 <QRCodeReader setQrData={setQrData} />
