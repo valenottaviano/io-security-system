@@ -17,6 +17,7 @@ const NavBar = () => {
                     <Link href={'/'}><li>Home</li></Link>
                     <Link href={'https://docs.spotter.com.ar'}><li>Docs</li></Link>
                     <Link href={'/scanner'}><li>Demo</li></Link>
+                    <Link href={'/dashboard'}><li>Dashboard</li></Link>
                     <Link href={'/contact'}><li>Contact us</li></Link>
                 </ul>
             </nav>
