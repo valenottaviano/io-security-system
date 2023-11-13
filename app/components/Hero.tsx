@@ -27,7 +27,7 @@ export default function Hero() {
                 <Link href={'https://docs.spotter.com.ar'}>
                     <button className="bg-neutral-800 px-4 py-3 rounded-lg border-[1px] border-neutral-700 text-neutral-300 font-bold">
                         <span>Docs</span><FontAwesomeIcon icon={faFile} style={{
-                            width: '20px',
+                            width: '15px',
                             marginLeft: '0.5rem',
                             color: 'gray'
                         }} />

@@ -16,6 +16,8 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@prisma/client": "^5.5.2",
     "axios": "^1.6.0",
+    "chart.js": "^4.4.0",
+    "chartjs-adapter-moment": "^1.0.1",
     "jsdom": "^22.1.0",
     "jsonwebtoken": "^9.0.2",
     "modern-react-qr-reader": "^1.0.12",
@@ -23,6 +25,7 @@
     "next-auth": "^4.24.4",
     "nookies": "^2.5.2",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-webcam": "^7.2.0"
   },
