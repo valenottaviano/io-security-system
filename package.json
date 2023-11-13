@@ -21,6 +21,7 @@
     "jsdom": "^22.1.0",
     "jsonwebtoken": "^9.0.2",
     "modern-react-qr-reader": "^1.0.12",
+    "moment": "^2.29.4",
     "next": "14.0.1",
     "next-auth": "^4.24.4",
     "nookies": "^2.5.2",
