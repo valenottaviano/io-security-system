@@ -32,13 +32,13 @@ export default async function Stats() {
             <div className='flex flex-col items-center justify-center bg-neutral-800 p-5 rounded-md'>
                 <span className='text-4xl font-bold text-emerald-400'>{data.reduce((accumulator, currentValue) => {
                     return accumulator + parseInt(currentValue.status);
-                }, 0)}</span>
+                }, 0)}/ 355</span>
                 <span className='font-bold text-neutral-500'>Current users</span>
             </div>
-            <div className='flex flex-col items-center justify-center bg-neutral-800 p-5 rounded-md'>
+            {/* <div className='flex flex-col items-center justify-center bg-neutral-800 p-5 rounded-md'>
                 <span className='text-4xl font-bold text-emerald-400'>{data.length}</span>
                 <span className='font-bold text-neutral-500'>Historical users</span>
-            </div>
+            </div> */}
         </div>
         <UsersTable data={data} />
     </div>
