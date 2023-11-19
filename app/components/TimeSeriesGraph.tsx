@@ -65,8 +65,8 @@ const TimeSeriesGraph: any = async (props: any) => {
 
 
     return (
-        <div className='w-screen p-5 pb-20 bg-white flex flex-col justify-center items-center rounded-md bg-neutral-900 dark:bg-neutral-900'>
-            <div className='h-[50vh] w-[90vw] mt-10 flex justify-center flex-col'>
+        <div className='p-5 pb-20 bg-white flex flex-col justify-center items-center rounded-md bg-neutral-900 dark:bg-neutral-900'>
+            <div className='h-[50vh] w-[90vw] md:w-[50vw] mt-10 flex justify-center flex-col'>
                 <h2 className='text-3xl text-emerald-400 font-bold'>Current amount of users in the parking lot.</h2>
                 <Line options={options} data={chartData} />
             </div>
