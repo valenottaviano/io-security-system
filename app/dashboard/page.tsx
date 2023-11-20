@@ -43,7 +43,7 @@ export default async function Dashboard() {
     return <>
         <section className="min-h-screen bg-neutral-900">
             <NavBar />
-            <div className="flex flex-col md:flex-row items-center justify-around">
+            <div className="flex flex-col md:flex-row justify-around">
                 <div className="flex flex-col items-center">
                     <TimeSeriesGraph data={data} />
                     <Stats
