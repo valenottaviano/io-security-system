@@ -5,6 +5,8 @@ import Stats from "../components/Stats";
 import TimeSeriesGraph from "../components/TimeSeriesGraph";
 import UsersTable from "../components/UsersTable";
 
+export const dynamic = "force-dynamic";
+
 const getData = async () => {
     const prisma = new PrismaClient()
     const data: any = await prisma.$queryRaw`select * from (
